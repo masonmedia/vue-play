@@ -2,21 +2,18 @@
     <div>
         <b-navbar toggleable="lg" type="dark" variant="dark" fixed="top">
             
-              <router-link to="/">
-                <b-navbar-brand>mason/media</b-navbar-brand>
-              </router-link>
-            
+            <b-link class="nav-link navbar-brand" to="/">mason/media</b-link>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-                <router-link to="/about">
-                    <b-nav-item>about</b-nav-item>
-                </router-link>
-                <b-nav-item>
-                  <router-link to="/services">services</router-link>   
-                </b-nav-item>
+                <b-link class="nav-link" to="/about">
+                    about
+                </b-link>
+                <b-link class="nav-link" to="/services">
+                    services
+                </b-link>
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->

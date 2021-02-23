@@ -1,14 +1,12 @@
 <template>
   <div>
-    <b-jumbotron 
-    class="min-h-100 d-flex flex-column justify-content-center align-items-start"
-    header="BootstrapVue" 
-    lead="Bootstrap v4 Components for Vue.js 2"
-    >
-      <p>For more information visit website</p>
-      <b-button variant="primary" href="#">More Info</b-button>
-    </b-jumbotron>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Jumbotron
+    class="bg-dark text-light"
+    title="masonmedia"
+    subtitle="vue · play"
+    button="Read more"
+    variant="outline-light"
+    to="/about" />
   </div>
 </template>
 
@@ -20,12 +18,12 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Jumbotron from '@/components/Jumbotron'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Jumbotron
   }
 }
 </script>

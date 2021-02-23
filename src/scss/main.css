@@ -27,6 +27,10 @@
   opacity: 0;
 }
 
+.display-1 {
+  line-height: .8;
+}
+
 body {
   font: bold 18px/100% 'Helvetica Neue', Arial, sans-serif;
 }
