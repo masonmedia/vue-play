@@ -38,6 +38,12 @@ const routes = [
 
 const router = new VueRouter({
   routes
+  // router.beforeEach((to, from, next) => {
+//   setTimeout(() => {
+//     window.scrollTo(0, 0);
+// }, 1000);
+//   next();
+// })
 })
 
 export default router

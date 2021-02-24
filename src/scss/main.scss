@@ -1,7 +1,11 @@
+// @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 @import './utilities.scss';
 @import './animations.scss';
 @import './text.scss';
 
 body {
+    background: #343a40;
     font: bold 18px/100% 'Helvetica Neue', Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }

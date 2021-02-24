@@ -1,22 +1,19 @@
 <template>
-    <div>
-        <!-- <ul v-for="user in users" v-bind:key="user.id">
-            <li>{user.name}</li>
-        </ul> -->
-
-        <div v-for="user in users" v-bind:key="user.id">
-
-        <b-card v-for="image in images" v-bind:key="image.id"
-        no-body
-        class="mb-3 shadow"
-        style="max-width: 20rem;"
-        :img-src="image.thumbnailUrl"
-        img-alt="Image"
-        img-top
-        >
+    <b-row class="p-0">
+        <b-col 
+        lg="3" md="6" sm="12" 
+        class="d-flex flex-wrap" 
+        v-for="user in users" v-bind:key="user.id">
+            <b-card
+            no-body
+            class="w-100 mb-3 shadow"
+            style="border-radius: 10px;"
+            img-src=""
+            img-alt="Image"
+            img-top
+            >
 
             <b-card-body>
-                <img :src="user.url" />
                 <b-card-title>{{ user.name }}</b-card-title>
                 <b-card-sub-title class="mb-2">{{ user.username }}</b-card-sub-title>
                 <b-card-text>
@@ -34,8 +31,9 @@
                 <a :href="user.website" target="_blank" rel="noreferrer" class="btn btn-outline-dark">Website</a>
             </b-card-body>
         </b-card>
-        </div>
-    </div>
+        </b-col>
+    </b-row>
+        
 </template>
 
 <script>

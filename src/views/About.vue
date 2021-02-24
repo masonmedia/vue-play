@@ -31,8 +31,12 @@ export default {
   name: 'About',
   components: {
     Jumbotron
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   }
 }
+
 </script>
 
 

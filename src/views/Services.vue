@@ -1,13 +1,16 @@
 <template>
     <div>
         <Jumbotron
-        class="bg-warning"
+        class="bg-dark text-light"
         title="Improving your _____ (i.e. everything)."
         subtitle="From design to websites, writing & strategy, we make it better."
         button="Read more"
         variant="outline-dark"
         to="/" />
-        <Card class="p-3" />
+        <b-container class="bg-dark" fluid>
+            <Card class="p-3" />
+        </b-container>
+    
     </div>
 </template>
 
@@ -21,6 +24,9 @@ export default {
     components: {
         Jumbotron,
         Card
+    },
+    mounted() {
+        window.scrollTo(0, 0);
     },
     data() {
         return {
@@ -37,3 +43,9 @@ export default {
 }
 
 </script>
+
+<style>
+    .bg-midnight {
+        background: midnightblue;
+    }
+</style>
