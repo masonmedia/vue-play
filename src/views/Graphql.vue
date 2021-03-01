@@ -21,7 +21,9 @@
         <h2 class="display-3">Big Time!</h2>
     </transition> -->
     <div class="py-5" v-for="repo in repos" :key="repo.id">
-        <img class="img-thumbnail w-25 rounded-circle shadow" :src="repo.owner.avatar_url" />
+        <img class="img-thumbnail shadow mb-3" 
+        style="border-radius: 100%; width: 150px; height: 150px"
+        :src="repo.owner.avatar_url" />
         <h2>{{ repo.name }}</h2>
         <ul class="list-unstyled">
             <li>{{ repo.description }}</li>
