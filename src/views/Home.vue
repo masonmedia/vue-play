@@ -1,11 +1,11 @@
 <template>
   <div>
     <Jumbotron
-    class="bg-dark text-light"
+    v-animate-onscroll="{down: 'animate__animated aniamte__flip', up: 'animate_animated animate__rotateOut' }"
     title="masonmedia"
-    subtitle="vue · play"
+    subtitle=""
     button="Read more"
-    variant="outline-light"
+    variant="outline-pink"
     to="/about" />
   </div>
 </template>

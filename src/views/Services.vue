@@ -1,7 +1,7 @@
 <template>
     <div>
         <Jumbotron
-        class="bg-dark text-light"
+        class=""
         title="Improving your _____ (i.e. everything)."
         subtitle="From design to websites, writing & strategy, we make it better."
         button="Read more"
