@@ -1,0 +1,30 @@
+.bg-black-gradient {
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-sunset {
+    background-color: #90d5ec;
+    background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+}
+
+.rainbow-text {
+    background-color: #fff;
+    background: #12c2e9;
+    background: linear-gradient(90deg,#f64f59,#c471ed,#12c2e9);
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+  .sunset-text {
+    background-color: #fff;
+    background: #ff2b77;
+    // background: linear-gradient(90deg,#ff2b77, #fde352, #ff946d, #ff7771);
+    background: linear-gradient(270deg, #ff2b77, #fde352, #ff946d, #ff7771);
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}

@@ -2,18 +2,20 @@
     <b-row class="p-0">
         <b-col 
         lg="3" md="6" sm="12" 
-        class="d-flex flex-wrap" 
+        class="d-flex flex-wrap p-2" 
         v-for="user in users" v-bind:key="user.id">
+
             <b-card
+            v-animate-onscroll="{down: 'animate__animated animate__fadeIn', up: 'animate__animated rotateOut' }"
             no-body
-            class="w-100 mb-3 shadow"
+            class="w-100 shadow"
             style="border-radius: 10px;"
             img-src=""
             img-alt="Image"
             img-top
             >
-
-            <b-card-body>
+            <b-card-body
+            v-animate-onscroll="{down: 'animate__animated animate__fadeInRight', up: 'animate__animated rotateOut' }">
                 <b-card-title>{{ user.name }}</b-card-title>
                 <b-card-sub-title class="mb-2">{{ user.username }}</b-card-sub-title>
                 <b-card-text>
@@ -59,8 +61,7 @@ mounted() {
     axios.all([axios.get(`https://jsonplaceholder.typicode.com/users`),
     axios.get(`https://jsonplaceholder.typicode.com/photos`)])
      .then(axios.spread((firstResponse, secondResponse) => { 
-         this.users = firstResponse.data;
-         this.images = secondResponse.data; 
+         this.users = firstResponse.data, secondResponse.data; 
          console.log(firstResponse.data,secondResponse.data);
      }))
      .catch(error => console.log(error))

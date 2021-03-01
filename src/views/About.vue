@@ -1,25 +1,23 @@
 <template>
   <div>
     <Jumbotron
-    class="bg-dark text-light"
+    class=""
     title="Making your brand better through bold design."
     subtitle="We start where you are. Then add zhuzh."
     button="Read more"
     variant="outline-light"
     to="/" />
     <div class="row min-h-100">
-      <transition 
-        name="fade"
-        mode="out-in">
-      <div class="col-lg-12 d-flex align-items-center justify-content-center">
-        <!-- appear-class="custom-appear-class"
-        appear-to-class="animate__animated animate__fadeInDownBig"
-        appear-active-class="animate__animated animate__backOutDown"   -->
-    <!-- appear-to-class="custom-appear-to-class" (2.1.8+) -->
-          <!-- <h1>About!</h1> -->
-      </div>
-        </transition>
 
+      <div class="col-lg-12 d-flex align-items-center justify-content-center text-light">
+          <h1 v-animate-onscroll="{down: 'animate__animated animate__bounceInDown', up: 'animate__animated bounceOutUp' }">About
+          </h1>
+          <!-- <transition-group name="list" tag="p">
+            <span v-for="todo in todos" :key="todo" class="list-item">
+              {{ todo.text }}
+            </span>
+          </transition-group> -->
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +30,18 @@ export default {
   components: {
     Jumbotron
   },
+  data() {
+    return {
+      // items: [a,b,o,u,t,m,e]
+      todos: [
+        { text: 'a' },
+        { text: 'b' },
+        { text: 'o' },
+        { text: 'u' },
+        { text: 't' }
+      ]
+    }
+  },
   mounted() {
     window.scrollTo(0, 0);
   }
@@ -41,6 +51,21 @@ export default {
 
 
 <style>
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 
 .fade-enter {
   opacity: 0;

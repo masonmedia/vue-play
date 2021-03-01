@@ -14,6 +14,9 @@
                 <b-link class="nav-link" to="/services">
                     services
                 </b-link>
+                <b-link class="nav-link" to="/graphql">
+                    graph
+                </b-link>
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
